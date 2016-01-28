@@ -1,9 +1,15 @@
-# webpack-react-and-raw-html
-Setup to create React components with Hot reload functionality from Webpack and make export to raw HTML
+# Webpack + React + Raw HTML
+Webpack + React Setup to create React components with hot reload functionality and HTML export 
 
-to use in dev :
-"npm run dev"
-http://localhost:8080/webpack-dev-server/
+##Installation instructions:
+- Install node
+- Clone this repo and cd into retrieved directory
+- Run `$ npm install`
 
-to generate raw HTML to dist :
-"npm start"
+###To use in dev:
+- Run `$ npm run dev`
+- Open `http://localhost:8080/webpack-dev-server` to view dev server status and views
+
+###To generate raw HTML:
+- `$ npm run dist`
+- Profit
