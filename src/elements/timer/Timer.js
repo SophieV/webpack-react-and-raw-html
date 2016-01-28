@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-var SetIntervalMixin = {
+let SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
   },
