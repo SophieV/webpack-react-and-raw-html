@@ -2,7 +2,7 @@
 Setup to create React components with Hot reload functionality from Webpack and make export to raw HTML
 
 to use in dev :
-"npm test"
+"npm run dev"
 http://localhost:8080/webpack-dev-server/
 
 to generate raw HTML to dist :
