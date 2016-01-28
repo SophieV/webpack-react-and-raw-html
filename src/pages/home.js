@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Timer from '../elements/timer/Timer';
 
-let Index = React.createClass({
+let Home = React.createClass({
   render: function() {
     return (
       <div>Timer: <Timer /></div>
@@ -9,4 +9,4 @@ let Index = React.createClass({
   }
 });
 
-export default Index;
+export default Home;

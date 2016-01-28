@@ -6,7 +6,7 @@ if(module.hot) {
   module.hot.accept();
 }
 
-require("./style.css");
+require("./style/style.css");
 
 if (typeof document != 'undefined') {
   ReactDOM.render(<App />, document.getElementById('root'));

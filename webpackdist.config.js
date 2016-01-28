@@ -9,7 +9,7 @@ var paths = [
 module.exports = {
 
   entry: {
-  'main':'./src/staticIndex.js'
+  'main':'./src/distEntry.js'
 },
   output: {
     filename: 'staticBundle.js',

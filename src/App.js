@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Index from './pages/index';
+import Home from './pages/home.js';
 
 export default class App extends Component {
   render() {
     return (
-      <Index/>
+      <Home/>
     );
   }
 }
