@@ -1,5 +1,5 @@
 var React = require('react');
-var MyDependency = require('./aDependency.js');
+var MyDependency = require('./aDependency.jsx');
 
 var ComponentUnderTest = React.createClass({
   getInitialState: function() {
