@@ -26,7 +26,7 @@ let Timer = React.createClass({
   render: function() {
     return (
       <p>
-        React has been running for {this.state.seconds} seconds.
+        Hey Sofi, React has been running for {this.state.seconds} seconds.
       </p>
     );
   }
