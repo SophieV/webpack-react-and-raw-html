@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Hot reloading for dev, raw HTML output option too",
   "scripts": {
-		"start": "webpack --progress --config webpackdist.config.js",
-    "dev": "webpack-dev-server --hot --inline --module-bind \"css=style\\!css\" --config webpack.config.js"
+    "start": "webpack-dev-server --hot --inline --module-bind \"css=style\\!css\" --config webpack.config.js",
+		"dist": "webpack --progress --config webpackdist.config.js"
   },
   "devDependencies": {
     "babel-core": "^6.0.20",
