@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+if (typeof(window) == 'undefined'){
+    global.window = new Object();
+}
+
 let SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];

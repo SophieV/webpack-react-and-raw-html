@@ -1,0 +1,20 @@
+module.exports = {
+	"links": [
+		{
+			"href": "http://google.com",
+			"text": "Make an Appointment"
+		},
+		{
+			"href": "http://apple.com",
+			"text": "Access MyChart"
+		},
+		{
+			"href": "http://amazon.com",
+			"text": "Pay a Bill"
+		},
+		{
+			"href": "http://github.com",
+			"text": "Refer a Patient"
+		}
+	]
+}

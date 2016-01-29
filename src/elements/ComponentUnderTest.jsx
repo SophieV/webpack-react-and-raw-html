@@ -1,6 +1,7 @@
 var React = require('react');
 var MyDependency = require('./aDependency.jsx');
 
+
 var ComponentUnderTest = React.createClass({
   getInitialState: function() {
     return { isChecked: false };
@@ -17,6 +18,7 @@ var ComponentUnderTest = React.createClass({
           onChange={this.onChange}
         />
         {this.state.isChecked ? this.props.labelOn : this.props.labelOff}
+				<Button kind="default">Testing scope</Button>
         <MyDependency />
       </label>
     );
