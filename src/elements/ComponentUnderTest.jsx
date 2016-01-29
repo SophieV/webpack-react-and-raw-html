@@ -1,7 +1,7 @@
-var React = require('react');
-var MyDependency = require('./aDependency.jsx');
+import React from 'react';
+import MyDependency from './aDependency.jsx';
 
-var ComponentUnderTest = React.createClass({
+const ComponentUnderTest = React.createClass({
   getInitialState: function() {
     return { isChecked: false };
   },

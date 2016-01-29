@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-let SetIntervalMixin = {
+const SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
   },
@@ -12,7 +12,7 @@ let SetIntervalMixin = {
   }
 };
 
-let Timer = React.createClass({
+const Timer = React.createClass({
   mixins: [SetIntervalMixin], // Use the mixin
   getInitialState: function() {
     return {seconds: 0};

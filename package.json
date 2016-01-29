@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Hot reloading for dev, raw HTML output option too",
   "scripts": {
-		"start": "webpack-dev-server --hot --inline --module-bind \"css=style\\!css\" --config webpack.config.js",
-		"dist": "webpack --progress --config webpackdist.config.js",
+    "start": "NODE_ENV=development PORT=4000 HOT_LOAD_PORT=8080 babel-node server.js",
+		"dist": "NODE_ENV=production babel-node server.js",
     "test": "mocha --compilers js:babel-register"
   },
   "devDependencies": {

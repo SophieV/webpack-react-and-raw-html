@@ -1,7 +1,7 @@
-var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-var path = require('path');
+import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin';
+import path from 'path';
 
-var paths = [
+const paths = [
   '/',
   '/world/'
 ];

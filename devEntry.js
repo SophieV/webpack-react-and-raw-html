@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './src/App.jsx';
+let AppComponent = React.createFactory(App);
 
 if(module.hot) {
   module.hot.accept();
@@ -9,5 +10,5 @@ if(module.hot) {
 require("./style/style.css");
 
 if (typeof document != 'undefined') {
-  ReactDOM.render(<App />, document.getElementById('root'));
+  ReactDOM.render(AppComponent(window.APP_PROPS), document.getElementById('app'));
 }

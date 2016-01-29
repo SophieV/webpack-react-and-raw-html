@@ -2,16 +2,14 @@ import React from 'react';
 import Timer from '../elements/timer/Timer.jsx';
 import ComponentUnderTest from '../elements/ComponentUnderTest.jsx';
 
-const Home = React.createClass({
+const NotFound = React.createClass({
   render: function() {
     return (
-      <div className="home">
-        <h1>Welcome Home</h1>
-        Timer: <Timer />
-      	<ComponentUnderTest/>
+      <div>
+        <h1>Sorry, not found</h1>
       </div>
     );
   }
 });
 
-module.exports = Home;
+module.exports = NotFound;
