@@ -8,6 +8,7 @@ const ComponentUnderTest = React.createClass({
   onChange: function() {
     this.setState({isChecked: !this.state.isChecked});
   },
+  //<Button kind="default">Testing scope</Button>
   render: function() {
     return (
       <label>
