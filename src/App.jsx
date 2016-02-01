@@ -1,7 +1,10 @@
 import React from 'react';
 import RouteMapper from '../routes/routeMapping';
-require("../style/style.scss");
 
+// Node fails if trying to bundle Window
+if (typeof window !== 'undefined') {
+  require('../style/style.scss');
+}
 
 const App = React.createClass({
   propTypes: {

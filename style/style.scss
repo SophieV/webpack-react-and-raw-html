@@ -8,3 +8,8 @@ body * + * {
 		padding: 4rem 2rem;
 		background-color: #eee;
 }
+
+
+.jumbotron + .tabs {
+	background-color: yellow;
+}
