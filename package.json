@@ -4,7 +4,7 @@
   "description": "Hot reloading for dev, raw HTML output option too",
   "scripts": {
     "start": "NODE_ENV=development PORT=4000 HOT_LOAD_PORT=8080 babel-node server.js",
-		"dist": "NODE_ENV=production babel-node server.js",
+    "dist": "NODE_ENV=production babel-node server.js",
     "test": "mocha --compilers js:babel-register"
   },
   "devDependencies": {
@@ -22,6 +22,7 @@
     "fs": "0.0.2",
     "jsdom": "^8.0.1",
     "jsdom-global": "^1.6.1",
+    "json-loader": "^0.5.4",
     "mkdirp": "^0.5.1",
     "mocha": "^2.4.4",
     "node-sass": "^3.4.2",

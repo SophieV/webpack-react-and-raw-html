@@ -2,6 +2,7 @@ import React from 'react';
 import Timer from '../elements/timer/Timer.jsx';
 import ComponentUnderTest from '../elements/ComponentUnderTest.jsx';
 import CrownNav from '../elements/crownNav/CrownNav.jsx';
+import CrownNav_data from '../elements/crownNav/data.json';
 
 const Home = React.createClass({
   render: function() {
@@ -13,7 +14,7 @@ const Home = React.createClass({
 						<h3 className="subtitle is-3">Pulling in from local data.json file</h3>
 					</div>
 				</header>
-				<CrownNav/>
+				<CrownNav data={CrownNav_data} />
 			</div>
     );
   }
