@@ -1,28 +1,33 @@
 import React from 'react';
+import CrownNavItem from './CrownNavItem.jsx';
+
 if (typeof window !== 'undefined') {
   require('./CrownNav.scss');
 }
-import CrownNavItem from './CrownNavItem.jsx';
 
 let style = {
 	/*
 	override styles here.
 	*/
+	container: {},
+	list: {}
 };
 
-
 let CrownNav = React.createClass({
+  propTypes: {
+    links: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  },
+
   render() {
-		let links = this.props.data.links;
+    let items = this.props.links.map(function(link, index) {
+        return <CrownNavItem key={index} id={index} text={link.text} href={link.href} />;
+      });
+
     return (
-			<div className="tabs crown-nav__container" style={style}>
+			<div className="tabs crown-nav__container" style={style.container}>
 				<div className="container">
-		      <ul className="crown-nav__list">
-					{
-						links.map(function(link, i) {
-					 		return <CrownNavItem data={link} key={i} />
-						})
-					}
+		      <ul className="crown-nav__list" style={style.list}>
+						{items}
 		      </ul>
 				</div>
 			</div>

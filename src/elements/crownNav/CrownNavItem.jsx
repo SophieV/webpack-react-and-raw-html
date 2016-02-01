@@ -1,15 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 let style = {
 	/*
 	override styles here.
 	*/
+	li: {},
+	a: {
+		// color: "pink"
+	}
 };
 
 let CrownNavItem = React.createClass({
+  propTypes: {
+    href: React.PropTypes.string.isRequired,
+    text: React.PropTypes.string.isRequired
+  },
   render: function() {
-    return <li key={this.props.data.id}><a href={this.props.data.href}>{this.props.data.text}</a></li>;
+    return (
+			<li style={style.li}>
+				<a href={this.props.href} style={style.a}>
+					{this.props.text}
+				</a>
+			</li>
+		);
   }
 });
 
-export default CrownNavItem;
+module.exports = CrownNavItem;

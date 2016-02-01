@@ -45,7 +45,7 @@ let config = {
       },
       {
 	      test: /\.css$/,
-				loader: 'style!css'
+				loader: 'style!css?sourceMap'
 	    },
 			{
 				test: /\.json$/,

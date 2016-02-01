@@ -15,6 +15,10 @@
 		{
 			"href": "http://github.com",
 			"text": "Refer a Patient"
+		},
+		{
+			"href": "http://reddit.com",
+			"text": "Read the news"
 		}
 	]
 }
