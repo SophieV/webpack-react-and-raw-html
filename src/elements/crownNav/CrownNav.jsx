@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './CrownNav.scss';
-import data from './data.json';
+import CrownNavItem from './CrownNavItem.jsx';
 
 let style = {
 	/*
@@ -8,22 +8,17 @@ let style = {
 	*/
 };
 
-let CrownNavItem = React.createClass({
-  render: function() {
-    return <li key={this.props.data.id}><a href={this.props.data.href}>{this.props.data.text}</a></li>;
-  }
-});
 
 let CrownNav = React.createClass({
   render() {
-		let links = data.links;
+		let links = this.props.data.links;
     return (
 			<div className="tabs crown-nav__container" style={style}>
 				<div className="container">
 		      <ul className="crown-nav__list">
 					{
-						links.map(function(link) {
-					 		return <CrownNavItem data={link} />
+						links.map(function(link, i) {
+					 		return <CrownNavItem data={link} key={i} />
 						})
 					}
 		      </ul>
