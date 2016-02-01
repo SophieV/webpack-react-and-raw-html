@@ -9,7 +9,6 @@ let style = {
 		// color: "pink"
 	}
 };
-
 let CrownNavItem = React.createClass({
   propTypes: {
     href: React.PropTypes.string.isRequired,

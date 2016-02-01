@@ -40,9 +40,13 @@ let config = {
 	      }
 	    },
       {
-        test: /\.(scss|sass)$/,
+        test: /\.scss$/,
 				loader: 'style!css!sass?sourceMap'
       },
+			{
+				test: /\.sass$/,
+				loaders: ["style", "css", "sass?indentedSyntax"]
+			},
       {
 	      test: /\.css$/,
 				loader: 'style!css?sourceMap'
