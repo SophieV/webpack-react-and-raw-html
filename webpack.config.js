@@ -15,7 +15,7 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
-    //new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     loaders: [
@@ -34,7 +34,11 @@ module.exports = {
 	    },
 			{
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        loader: 'style!css!sass'
+      },
+			{
+        test: /\.css$/,
+        loader: 'style!css'
       }
 		]
   }
