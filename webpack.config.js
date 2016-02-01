@@ -40,17 +40,17 @@ let config = {
 	      }
 	    },
       {
-        test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        test: /\.(scss|sass)$/,
+				loader: 'style!css!sass?sourceMap'
       },
       {
 	      test: /\.css$/,
-	      loader: 'style-loader!css-loader'
+				loader: 'style!css'
 	    },
-      {
-	      test: /\.json$/,
-	      loader: 'json'
-	    }
+			{
+				test: /\.json$/,
+				loader: 'json'
+			}
 		]
   },
   plugins: [
