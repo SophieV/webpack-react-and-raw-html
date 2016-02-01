@@ -1,0 +1,6 @@
+:local(.jumbotron + .tabs) {
+	margin-top: 1rem;
+}
+:local(.tabs li + li){
+	margin-top: 0;
+}

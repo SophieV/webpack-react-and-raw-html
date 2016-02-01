@@ -1,9 +1,7 @@
 import React from 'react';
-if (typeof window !== 'undefined') {
-  require('./CrownNav.scss');
-}
-
-import data from './data.json';
+console.log('requiring crown nav css');
+// import './CrownNav.scss';
+import CrownNavItem from './CrownNavItem.jsx';
 
 let style = {
 	/*
@@ -11,23 +9,23 @@ let style = {
 	*/
 };
 
-let CrownNavItem = React.createClass({
-  render: function() {
-    return <li key={this.props.data.id}><a href={this.props.data.href}>{this.props.data.text}</a></li>;
-  }
-});
+
 
 let CrownNav = React.createClass({
+  propTypes: {
+    links: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  },
+
   render() {
+    let items = this.props.links.map(function(link, index) {
+        return <CrownNavItem key={index} id={index} text={link.text} href={link.href} />;
+      });
+
     return (
 			<div className="tabs crown-nav__container" style={style}>
 				<div className="container">
 		      <ul className="crown-nav__list">
-					{
-						data.links.map(function(link) {
-					 		return <CrownNavItem data={link} />;
-						})
-					}
+					{items}
 		      </ul>
 				</div>
 			</div>
