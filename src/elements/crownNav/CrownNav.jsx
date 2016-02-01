@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import './CrownNav.scss';
+import React from 'react';
+if (typeof window !== 'undefined') {
+  require('./CrownNav.scss');
+}
 import CrownNavItem from './CrownNavItem.jsx';
 
 let style = {

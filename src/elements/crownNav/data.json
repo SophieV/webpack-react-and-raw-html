@@ -1,8 +1,12 @@
-module.exports = {
+{
 	"links": [
 		{
 			"href": "http://google.com",
 			"text": "Make an Appointment"
+		},
+		{
+			"href": "http://apple.com",
+			"text": "Access MyChart"
 		},
 		{
 			"href": "http://apple.com",

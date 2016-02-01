@@ -1,6 +1,6 @@
-let React = require('react');
+import React from 'react';
 
-var aDependency = React.createClass({
+const aDependency = React.createClass({
   render: function() {
     return (<div>dependency run</div>);
   }

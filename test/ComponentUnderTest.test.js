@@ -1,8 +1,8 @@
-let assert = require('assert');
-let React = require('React');
-let proxyquire =  require('proxyquire');
-let TestUtils = require('react-addons-test-utils');
-let ReactEmptyComponentStub  = require('./reactStub');
+import assert from 'assert';
+import React from 'React';
+import proxyquire from 'proxyquire';
+import TestUtils from 'react-addons-test-utils';
+import ReactEmptyComponentStub from './reactStub';
 
 describe('Component under test', function() {
 
@@ -14,9 +14,9 @@ let ComponentUnderTest_StubDependency;
   });
 
   beforeEach(function() {
-    ComponentUnderTest_StubDependency = proxyquire(process.cwd() + '/src/elements/ComponentUnderTest.js', {
+    ComponentUnderTest_StubDependency = proxyquire(process.cwd() + '/src/elements/ComponentUnderTest.jsx', {
       // dependency - exact required name
-      './aDependency.js': ReactEmptyComponentStub
+      './aDependency.jsx': ReactEmptyComponentStub
     });
   });
 
@@ -27,16 +27,16 @@ let ComponentUnderTest_StubDependency;
 
   it('changes the text after click', function() {
     // Render a checkbox with label in the document
-    var checkbox = TestUtils.renderIntoDocument(
+    let checkbox = TestUtils.renderIntoDocument(
       <ComponentUnderTest_StubDependency labelOn="On" labelOff="Off" />
     );
 
     // Verify that it's Off by default
-    var label = TestUtils.findRenderedDOMComponentWithTag(checkbox, 'label');
+    let label = TestUtils.findRenderedDOMComponentWithTag(checkbox, 'label');
     assert.equal(label.textContent, 'Off');
 
     // Simulate a click and verify that it is now On
-    var input = TestUtils.findRenderedDOMComponentWithTag(checkbox, 'input');
+    let input = TestUtils.findRenderedDOMComponentWithTag(checkbox, 'input');
     TestUtils.Simulate.change(input);
     assert.equal(label.textContent, 'On');
   });

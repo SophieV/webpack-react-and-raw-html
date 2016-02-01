@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './CrownNav.scss';
 
 let style = {
 	/*

@@ -1,14 +1,14 @@
-var React = require('react');
-var MyDependency = require('./aDependency.jsx');
+import React from 'react';
+import MyDependency from './aDependency.jsx';
 
-
-var ComponentUnderTest = React.createClass({
+const ComponentUnderTest = React.createClass({
   getInitialState: function() {
     return { isChecked: false };
   },
   onChange: function() {
     this.setState({isChecked: !this.state.isChecked});
   },
+  //<Button kind="default">Testing scope</Button>
   render: function() {
     return (
       <label>
@@ -18,7 +18,6 @@ var ComponentUnderTest = React.createClass({
           onChange={this.onChange}
         />
         {this.state.isChecked ? this.props.labelOn : this.props.labelOff}
-				<Button kind="default">Testing scope</Button>
         <MyDependency />
       </label>
     );
