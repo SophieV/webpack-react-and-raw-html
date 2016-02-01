@@ -37,7 +37,10 @@
   },
   "dependencies": {
     "express": "^4.13.4",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react": "latest",
+    "react-dom": "latest",
+    "react-addons-test-utils": "latest",
+    "underscore": "latest",
+    "http-proxy": "latest"
   }
 }
