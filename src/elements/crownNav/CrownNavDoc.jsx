@@ -39,28 +39,37 @@ const CrownNavDoc = React.createClass({
 			          Markup
 			        </strong>
 			      </div>
+
 						<figure>
-							<pre data-language-display="React Markup">
+							<div data-language-display="JSON">
+								<code>
+									{ JSON.stringify(crownNavData.links) }
+								</code>
+							</div>
+						</figure>
+
+						<figure>
+							<div data-language-display="React Markup">
 								<code>
 									{`<CrownNav links={ crownNavData.links } />`}
 								</code>
-							</pre>
+							</div>
 						</figure>
 
 						<figure>
-							<pre data-language-display="React HTML Markup">
+							<div data-language-display="React HTML Markup">
 								<code>
 									{ ReactDOMServer.renderToString(<CrownNav links={crownNavData.links}/>) }
 								</code>
-							</pre>
+							</div>
 						</figure>
 
 						<figure>
-							<pre data-language-display="Outputted HTML Markup">
+							<div data-language-display="Outputted HTML Markup">
 								<code>
 									{ ReactDOMServer.renderToStaticMarkup(<CrownNav links={crownNavData.links}/>) }
 								</code>
-							</pre>
+							</div>
 						</figure>
 					</section>
 				</div>
