@@ -25,54 +25,39 @@ const CrownNavDoc = React.createClass({
 				<div className="container">
 					<section className="section">
 			      <div className="heading">
-			        <h2 className="subtitle">
+			        <strong>
 			          Real Example
-			        </h2>
+			        </strong>
 			      </div>
-
 						<figure>
 							{<CrownNav links={ crownNavData.links } />}
 						</figure>
 					</section>
-
-
 					<section className="section">
-			      <div className="heading">
-			        <h3 className="subtitle">React Markup</h3>
+						<div className="heading">
+			        <strong>
+			          Markup
+			        </strong>
 			      </div>
 						<figure>
-							<pre data-language="language-html">
-								<code className="language-html">
+							<pre data-language-display="React Markup">
+								<code>
 									{`<CrownNav links={ crownNavData.links } />`}
 								</code>
 							</pre>
 						</figure>
-					</section>
-
-
-					<section className="section">
-			      <div className="heading">
-			        <h3 className="subtitle">React HTML Markup</h3>
-			      </div>
 
 						<figure>
-							<pre data-language="language-html">
-								<code className="language-html">
+							<pre data-language-display="React HTML Markup">
+								<code>
 									{ ReactDOMServer.renderToString(<CrownNav links={crownNavData.links}/>) }
 								</code>
 							</pre>
 						</figure>
-					</section>
-
-
-					<section className="section">
-			      <div className="heading">
-			        <h3 className="subtitle">Plain HTML Markup</h3>
-			      </div>
 
 						<figure>
-							<pre data-language="language-html">
-								<code className="language-html">
+							<pre data-language-display="Outputted HTML Markup">
+								<code>
 									{ ReactDOMServer.renderToStaticMarkup(<CrownNav links={crownNavData.links}/>) }
 								</code>
 							</pre>
