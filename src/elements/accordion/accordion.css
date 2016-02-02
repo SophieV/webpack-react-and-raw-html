@@ -1,0 +1,7 @@
+.accordion-container {
+  min-height: 0;
+  display: inline-block;
+  position: relative;
+	perspective: 900;
+	background-color: yellow;
+}

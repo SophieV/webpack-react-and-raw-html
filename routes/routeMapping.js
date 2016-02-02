@@ -3,11 +3,17 @@ import React from 'react';
 import Home from '../src/pages/Home.jsx';
 import About from '../src/pages/About.jsx';
 import NotFound from '../src/pages/NotFound.jsx';
+import CrownNavDoc from '../src/elements/crownNav/CrownNavDoc.jsx';
+
 
 const routeMapping = [
   {
     route: "/",
     component: Home
+  },
+	{
+    route: "/components/crown-nav",
+    component: CrownNavDoc
   },
   {
     route: "/about",

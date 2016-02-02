@@ -1,5 +1,5 @@
-import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin';
-import path from 'path';
+var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+var path = require('path');
 
 const paths = [
   '/',
@@ -9,7 +9,7 @@ const paths = [
 module.exports = {
 
   entry: {
-  'main':'./src/distEntry.js'
+  'main':'./distEntry.js'
 },
   output: {
     filename: 'staticBundle.js',
@@ -40,7 +40,15 @@ module.exports = {
 			{
         test: /\.scss$/,
         loaders: ["style", "css", "sass"]
-      }
+      },
+			{
+	      test: /\.css$/,
+				loader: 'style!css?sourceMap'
+	    },
+			{
+				test: /\.json$/,
+				loader: 'json'
+			}
 		]
   }
 };

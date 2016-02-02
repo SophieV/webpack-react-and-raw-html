@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import RouteMapper from './routeMapping';
 import App from '../src/App.jsx';
+import PageContainer from '../src/output/PageContainer.jsx';
 let AppComponent = React.createFactory(App);
 
 const router = express.Router();
@@ -10,22 +11,16 @@ const DOM = React.DOM, body = DOM.body, div = DOM.div, script = DOM.script;
 
 const isProduction = (process.env.NODE_ENV === 'production');
 
-let generateFullRawPage = function(res,route) {
+let generateFullRawPage = function(res, route) {
   let props = {
     routeName: route,
     isServerCall: true
   };
 
   res.setHeader('Content-Type', 'text/html');
-  let html = ReactDOMServer.renderToStaticMarkup(body(null,
-    // the id here needs to match the mounting id specified in devEntry.jsx
-    div({id: 'app', dangerouslySetInnerHTML: {__html:
-      ReactDOMServer.renderToStaticMarkup(AppComponent(props))
-    }}),
-    script({dangerouslySetInnerHTML: {__html:
-      'var APP_PROPS = ' + JSON.stringify(props) + ';'
-    }})
-  ));
+  let html = ReactDOMServer.renderToStaticMarkup(
+		<PageContainer dynamicComponent={ReactDOMServer.renderToStaticMarkup(AppComponent(props))} appProps={props} />
+  );
 
   // Return the page to the browser
   res.end(html);
@@ -38,18 +33,9 @@ let generateFullPage = function(res, route) {
   };
 
   res.setHeader('Content-Type', 'text/html');
-  let html = ReactDOMServer.renderToStaticMarkup(body(null,
-    // the id here needs to match the mounting id specified in devEntry.jsx
-    div({id: 'app', dangerouslySetInnerHTML: {__html:
-      ReactDOMServer.renderToString(AppComponent(props))
-    }}),
-    script({dangerouslySetInnerHTML: {__html:
-      'var APP_PROPS = ' + JSON.stringify(props) + ';'
-    }}),
-    // script({src: '//fb.me/react-0.14.7.min.js'}),
-    // script({src: '//fb.me/react-dom-0.14.7.min.js'}),
-    script({src: '/build/bundle.js'})
-  ));
+  let html = ReactDOMServer.renderToStaticMarkup(
+		<PageContainer dynamicComponent={ReactDOMServer.renderToString(AppComponent(props))} appProps={props} />
+  );
 
   // Return the page to the browser
   res.end(html);

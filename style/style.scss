@@ -8,3 +8,7 @@ body * + * {
 		padding: 4rem 2rem;
 		background-color: #eee;
 }
+
+pre[data-language-display]:before {
+  content: attr(data-language-display);
+}

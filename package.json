@@ -4,7 +4,7 @@
   "description": "Hot reloading for dev, raw HTML output option too",
   "scripts": {
     "start": "NODE_ENV=development PORT=4000 HOT_LOAD_PORT=8000 babel-node server.js",
-    "dist": "NODE_ENV=production babel-node server.js",
+    "dist": "NODE_ENV=production webpack --config webpackdist.config.js",
     "test": "mocha --compilers js:babel-register"
   },
   "devDependencies": {
